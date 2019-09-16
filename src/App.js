@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import ApiDataSection from './ApiDataSection.js';
 import DateForm from './DateForm.js';
+import NASALogo from './NasaLogo.js';
 import HeadText from './styles/HeadText.js';
 import "./App.css";
 
@@ -13,6 +14,7 @@ function App() {
   
   return (
     <div className="App">
+      <NASALogo />
       <HeadText>Astronomy Photo Of The Day: {date}</HeadText>
       <ApiDataSection date = {date} />
       <DateForm onChangeEvent = {changeDate} />

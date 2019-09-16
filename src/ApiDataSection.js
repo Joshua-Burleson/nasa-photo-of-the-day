@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import DataDiv from './styles/DataDiv.js';
 import APODIframe from './styles/APODIframe.js';
 import APODImageContainer from './styles/APODImageContainer.js'
+import APODParagraph from './styles/APODParagraph.js';
 
 function FetchApod(date){
     const [mediaSrc, setMediaSrc] = useState(date);
@@ -25,11 +27,11 @@ function FetchApod(date){
   function ApiDataSection(props){
     const apiData = FetchApod(props.date);
     return(
-      <div className = "NASA-data">
+      <DataDiv>
         {apiData.media_type === "image" ? <APODImageContainer id = "POD" src = {apiData.src} alt = "NASA POD"></APODImageContainer>
                                         : <APODIframe title = 'APOD_vid' src = {apiData.src}></APODIframe>}
-        <p>{apiData.description}</p>
-      </div>
+        <APODParagraph>{apiData.description}</APODParagraph>
+      </DataDiv>
     )
   }
 
