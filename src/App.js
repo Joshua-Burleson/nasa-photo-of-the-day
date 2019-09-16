@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ApiDataSection from './ApiDataSection.js';
-import styled from 'styled-components';
+import DateForm from './DateForm.js';
 import HeadText from './styles/HeadText.js';
 import "./App.css";
 
@@ -15,15 +15,9 @@ function App() {
     <div className="App">
       <HeadText>Astronomy Photo Of The Day: {date}</HeadText>
       <ApiDataSection date = {date} />
-      <form>
-        <h3>Pick Another Date</h3>
-        <input id="date-picker" name="newDate" type="date" onChange = { (e) => setDate(e.target.value) }></input>
-      </form>
+      <DateForm onChangeEvent = {changeDate} />
     </div>
   );
 }
 
 export default App;
-
-
-//Next: test <DateForm onChangeEvent = {changeDate} /> in place of current form

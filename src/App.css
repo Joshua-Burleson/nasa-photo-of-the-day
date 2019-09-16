@@ -73,15 +73,19 @@ form{
   margin-bottom: 2%;
 }
 
-/* form input{
-  height: 2rem;
-  width: 15%;
-}
-
 input[type=date]::-webkit-inner-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
-} */
+}
+
+input[type=date] {
+  background: url('./styles/gnome-calendar.png') 97% 75% no-repeat;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  width: 5%;
+  opacity: 0;
+}
 
 
 
