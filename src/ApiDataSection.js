@@ -12,7 +12,7 @@ function FetchApod(date){
       const fetchData = (date) => {
         axios.get(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=DEMO_KEY`)
              .then(result => {
-               return setMediaSrc({media_type: result.data.media_type, src: result.media_type === 'image' ? result.data.hdurl : result.data.url, description: result.data.explanation});
+               return setMediaSrc({media_type: result.data.media_type, src: result.data.media_type === 'image' ? result.data.hdurl : result.data.url, description: result.data.explanation});
               })
               .catch(err => {
                 console.log(JSON.stringify(err));
