@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.navbar a, .navbar a:visited{
+  text-decoration: none;
+  color: #0B3D91;
+}
+
+.navbar a.active{
+  color: white;
+}

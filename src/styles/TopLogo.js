@@ -4,7 +4,7 @@ const TopLogo = styled.div`
     display: flex;
     width: 100vw;
     justify-content: center;
-    margin: -2% 0 -3%;
+    margin: 1% 0 -2%;
 `;
 
 export default TopLogo;
